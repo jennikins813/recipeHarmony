@@ -16,7 +16,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<!-- For grabbing values on radio forms  -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
 
 </head>
 <body>
@@ -42,24 +44,63 @@
 	</nav>
 
 	<div class="container">
-		<p>What's your gender?</p>
-		<form role="form" id="myForm">
-			<div class="radio">
-				<label><input type="radio" name="optradio" value="1">Female</label>
-			</div>
-			<div class="radio">
-				<label><input type="radio" name="optradio" value="2">Male</label>
-			</div>
-			<div class="radio">
-				<label><input type="radio" name="optradio" value="3">Other</label>
-			</div>
+	<!-- FORM 1 START -->
+	    <div id="form-1-container">
+		<p>What do you prefer?</p>
+		<form id="form-1" role="form" onsubmit="submitForm1(); return false">
+			<input type="radio" name="prefer" value="Inter">Something cormforting<br>
+
+			<input type="radio" name="prefer" value="Adv">Something Instagram worthy<br>
+
+			<input type="radio" name="prefer" value="Simple">I just want to eat NOW!!<br>
+
+			<input type="submit" value="Submit">
 		</form>
+		</div>
+	<!-- FORM 1 END -->
+	<!-- FORM 2 START -->
+	    <div id="form-2-container" style="display: none;">
+		<p>What is your relationship status?</p>
+		<form id="form-2" role="form" onsubmit="submitForm2(); return false">
+				<input type="radio" name="status" value="Simple">Why are you asking?<br>
+
+				<input type="radio" name="status" value="Adv">In a relationship<br>
+
+				<input type="radio" name="status" value="Inter">I'm an allstar!<br>
+
+				<input type="submit" value="Submit">
+		</form>
+		</div>
+	<!-- FORM 2 END -->
+	<!-- FORM 3 START -->
+	    <div id="form-3-container" style="display: none;">
+		<p>How long have you been in your place of residence?</p>
+		<form id="form-3" role="form" onsubmit="submitForm3(); return false">
+				<input type="radio" name="place" value="Adv">10+ years<br>
+
+				<input type="radio" name="place" value="Inter">This is a weird question...<br>
+
+				<input type="radio" name="place" value="Simple">I don't remember<br>
+
+				<input type="submit" value="Submit">
+		</form>
+		</div>
+	<!-- FORM 3 END -->
+	<!-- FORM 4 START -->
+	    <div id="form-4-container" style="display: none;">
+		<p>What ingrediants do you have?</p>
+		<form id="form-4" role="form" onsubmit="submitForm4(); return false">
+				<input type="radio" name="ingrediants" value="Simple">Not many<br>
+
+				<input type="radio" name="ingrediants" value="Inter">I have some beer<br>
+
+				<input type="radio" name="ingrediants" value="Adv">My fridge is full!<br>
+
+				<input type="submit" value="Submit">
+		</form>
+		</div>
+	<!-- FORM 4 END -->
 	</div>
-
-	<script>
-		$('myForm input')
-	</script>
-
-	<script src="quiz.js"></script>
+	<script src="formFunctions.js"></script>
 </body>
 </html>
